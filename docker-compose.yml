@@ -1,0 +1,7 @@
+services:
+  app:
+    build: .
+    volumes:
+      - ./input:/app/input  # Ensures input files are accessible
+      - ./output:/app/output # Ensures output files are stored persistently
+    command: ["node", "app.js", "-i", "input/house.jpg"] # Runs the app on startup
